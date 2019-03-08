@@ -11,8 +11,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @ComponentScan(value = "com.freedompop")
 @EnableSwagger2
-@EnableJpaRepositories("com.freedompop.login.dao")
-@EntityScan("com.freedompop.login.entities")
+@EnableJpaRepositories("com.freedompop.persons.dao")
+@EntityScan("com.freedompop.persons.entities")
 public class EjercicioApplication {
 
 

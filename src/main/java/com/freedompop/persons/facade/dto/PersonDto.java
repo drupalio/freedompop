@@ -7,11 +7,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
+@AllArgsConstructor 
+public class PersonDto {
 	@Getter @Setter
-	private String username;
+	private String name;
 	@Getter @Setter
-	private String password;
+	private String lastname;
+	@Getter @Setter
+	private String phonenumber;
+	@Getter @Setter
+	private String email;
+	@Getter @Setter
+	private String address;
 }
