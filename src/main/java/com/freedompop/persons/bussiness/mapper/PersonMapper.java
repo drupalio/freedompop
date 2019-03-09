@@ -1,9 +1,12 @@
 package com.freedompop.persons.bussiness.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.freedompop.persons.bussiness.dto.PersonDtoInt;
 import com.freedompop.persons.commons.Mapper;
 import com.freedompop.persons.facade.dto.PersonDto;
 
+@Component("person-mapper")
 public class PersonMapper  implements Mapper<PersonDtoInt, PersonDto>{
 
 	@Override
@@ -11,6 +14,7 @@ public class PersonMapper  implements Mapper<PersonDtoInt, PersonDto>{
 		PersonDtoInt inner=null;
 		if(outter!=null) {
 			inner=new PersonDtoInt();
+			inner.setId(outter.getId());
 			inner.setAddress(outter.getAddress());
 			inner.setEmail(outter.getEmail());
 			inner.setLastname(outter.getLastname());
@@ -25,6 +29,7 @@ public class PersonMapper  implements Mapper<PersonDtoInt, PersonDto>{
 		PersonDto outter=null;
 		if(inner!=null) {
 			outter=new PersonDto();
+			outter.setId(inner.getId());
 			outter.setAddress(inner.getAddress());
 			outter.setEmail(inner.getEmail());
 			outter.setLastname(inner.getLastname());

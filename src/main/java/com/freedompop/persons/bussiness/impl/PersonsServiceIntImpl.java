@@ -1,5 +1,7 @@
 package com.freedompop.persons.bussiness.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -18,26 +20,27 @@ public class PersonsServiceIntImpl  implements IPersonsServiceInt{
 
 	@Override
 	public ResponseDtoInt createPerson(PersonDtoInt person) {
-		// TODO Auto-generated method stub
-		return null;
+		return personsDAO.createPerson(person);
 	}
 
 	@Override
 	public PersonDtoInt findPerson(PersonDtoInt person) {
-		// TODO Auto-generated method stub
-		return null;
+		return personsDAO.findPerson(person);
 	}
 
 	@Override
 	public ResponseDtoInt updatePerson(PersonDtoInt person) {
-		// TODO Auto-generated method stub
-		return null;
+		return personsDAO.updatePerson(person);
 	}
 
 	@Override
 	public ResponseDtoInt deletePerson(PersonDtoInt person) {
-		// TODO Auto-generated method stub
-		return null;
+		return personsDAO.deletePerson(person);
+	}
+
+	@Override
+	public List<PersonDtoInt> listPersons() {
+		return personsDAO.listPersons();
 	}
 
 
